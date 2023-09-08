@@ -7,6 +7,7 @@ import { getServerSession } from "next-auth"
 import SignInButton from "./authentication/SignInButton"
 import SignOutButton from "./authentication/SignOutButton"
 import { options } from "@/app/api/auth/[...nextauth]/options"
+import { ModeToggle } from "./darkmode/mode-toggle";
 
 
 export async function SiteHeader() {
@@ -17,6 +18,7 @@ export async function SiteHeader() {
         <MainNav items={siteConfig.mainNav} />
         <MobileNav items={siteConfig.mobileNav}/>
         {!session ? <SignInButton/> : <SignOutButton/>}
+        <ModeToggle />
       </div>
     </header>
   )
