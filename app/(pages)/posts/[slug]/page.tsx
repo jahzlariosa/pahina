@@ -2,6 +2,7 @@ import { Post } from '@/types/posts';
 import Image from 'next/image';
 import { redirect } from 'next/navigation';
 import { strapiFetch } from '@/data/strapiFetch';
+import { Metadata } from 'next';
 
 interface PostListProps {
   params: {
@@ -9,10 +10,27 @@ interface PostListProps {
   };
 }
 
+export async function generateMetadata({ params }:any ): Promise<Metadata> {
+    const slug = params.slug;
+    
+    // Use the strapiFetch function to fetch data with filters and populate parameters
+    const post = await strapiFetch('posts', {
+        filters: `slug[$eq]=${slug}`,
+        populate: 'featured_image',
+    });
+    const postData = post;
+    const title = postData.data[0]?.attributes.title;
+    const excerpt = postData.data[0]?.attributes.excerpt;
+    return {
+       title:title,
+       description:excerpt,
+    };
+}
+
 const PostSlug = async ({ params }: PostListProps) => {
   const slug = params.slug;
 
-  // Use the fetchData function to fetch data
+  // strapiFetch
   const postData = await strapiFetch('posts', {
     filters: `slug[$eq]=${slug}`,
     populate: 'featured_image',
@@ -21,6 +39,8 @@ const PostSlug = async ({ params }: PostListProps) => {
   if (!postData.data[0]) {
     redirect('/not-found');
   }
+
+  const seoTitle = postData.title;
 
   const post: Post = postData.data[0]; // Assuming there is only one post with the given slug
 
