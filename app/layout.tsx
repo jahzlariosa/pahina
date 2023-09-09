@@ -1,5 +1,4 @@
 import AuthProvider from '@/components/providers/auth-providers'
-import { ThemeProvider } from '@/components/providers/theme-provider'
 import { SiteHeader } from '@/components/site-header'
 import '@/styles/globals.css'
 import type { Metadata } from 'next'
@@ -20,12 +19,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ThemeProvider>
           <AuthProvider>
             <SiteHeader />
             {children}
           </AuthProvider>
-        </ThemeProvider>
       </body>
     </html>
   )
