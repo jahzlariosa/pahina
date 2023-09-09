@@ -27,7 +27,7 @@ const PostSlug = async ({ params }:PostListProps) => {
 
     return (
         <>
-        <div className="my-8 container mx-auto">
+        <div className="my-8 container mx-auto md:max-w-6xl px-4">
             <div className="p-4 rounded-md dark:border-slate-800 dark:bg-slate-800">
             {post.attributes.featured_image && post.attributes.featured_image.data ? (
             <>
