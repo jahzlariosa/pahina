@@ -43,7 +43,7 @@ export function MobileNav({ items }: MainNavProps) {
               </Link>
             </div>
             {items?.length ? (
-              <ul className="block md:hidden">
+              <ul className="block md:hidden max-h-screen overflow-y-scroll">
                 {items?.map(
                   (item, index) =>
                     item.href && (
