@@ -6,7 +6,7 @@ export function ModeToggle() {
   const { theme, setTheme } = useTheme();
 
   return (
-    <div className="relative inline-block text-gray-600 dark:text-gray-400">
+    <div className="relative inline-block dark:text-white">
       <button
         className="text-lg p-2 focus:outline-none"
         onClick={() => {
@@ -18,7 +18,7 @@ export function ModeToggle() {
         }}
       >
         {theme === "light" ? (
-          <FiSun className="w-6 h-6" />
+          <FiSun className="w-6 h-6"/>
         ) : (
           <FiMoon className="w-6 h-6" />
         )}
