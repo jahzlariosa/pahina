@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils"
 import { NavItem } from '@/types/nav';
 import { siteConfig } from '@/config/site';
 import { Icons } from '../icons';
+import { useTheme } from 'next-themes'; // Import useTheme from next-themes
 
 interface MainNavProps {
   items?: NavItem[]
@@ -13,6 +14,8 @@ interface MainNavProps {
 
 export function MobileNav({ items }: MainNavProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const { theme } = useTheme(); // Access the current theme
+
 
   const toggleNav = () => {
     setIsOpen(!isOpen);
@@ -29,10 +32,10 @@ export function MobileNav({ items }: MainNavProps) {
           {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
         </button>
         <div
-          className={`fixed top-0 left-0 h-full w-64 transition-transform transform  ${isOpen ? 'translate-x-[-6%]' : '-translate-x-[120%]'
-            } md:translate-x-0 md:flex md:static md:translate-x-0 ease-in-out duration-300 bg-white dark:bg-zinc-800`}
+          className={cn(`fixed top-0 left-0 h-full w-64 transition-all transform  ${
+             isOpen ? 'translate-x-[-6.5%]' : '-translate-x-[120%]'} ${theme === 'light' ? 'bg-white' : 'bg-black' } ease-in-out duration-300 md-hidden`)}
         >
-          <div className="block md:hidden h-screen w-auto border-r border-slate-200 dark:border-zinc-500 p-4">
+          <div className="block md:hidden h-screen w-auto p-4">
             <div className="logo-mobile-nav mb-4">
               <Link href="/" className="flex items-center space-x-2">
                 <Icons.logo/>
