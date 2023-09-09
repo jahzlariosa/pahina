@@ -32,7 +32,7 @@ export function MobileNav({ items }: MainNavProps) {
           className={cn(`fixed top-0 left-0 h-full w-64 transition-all transform  ${
              isOpen ? 'translate-x-[-6.5%]' : '-translate-x-[120%]'} ease-in-out duration-300 md-hidden`)}
         >
-          <div className="block md:hidden h-screen w-auto p-4 bg-black">
+          <div className="block md:hidden h-screen w-auto p-4 dark:bg-black bg-white transition-all duration-200 border-r border-stone-200">
             <div className="logo-mobile-nav mb-4">
               <Link href="/" className="flex items-center space-x-2">
                 <Icons.logo/>

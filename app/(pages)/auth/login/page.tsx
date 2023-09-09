@@ -56,8 +56,8 @@ export default async function AuthenticationPage() {
             Acme Inc
           </div>
         </div>
-        <div className="min-h-screen bg-gray-100 dark:bg-black flex items-center justify-center">
-          <div className="dark:bg-zinc-800 bg-white py-6 px-8 rounded-xl shadow-md w-full sm:max-w-md m-4 lg:m-auto relative top-[-8em]">
+        <div className="min-h-screen flex items-center justify-center">
+          <div className="dark:bg-black py-6 px-8 rounded-xl shadow-md w-full sm:max-w-md m-4 lg:m-auto relative top-[-8em]">
             <GoogleLogin />
             <PasswordLessForm/>
             <div className="flex justify-between mt-2">
