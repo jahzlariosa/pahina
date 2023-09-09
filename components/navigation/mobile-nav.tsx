@@ -33,7 +33,7 @@ export function MobileNav({ items }: MainNavProps) {
              isOpen ? 'translate-x-[-6.5%]' : '-translate-x-[120%]'} ease-in-out duration-300 md-hidden`)}
         >
           <div className="block md:hidden h-screen w-auto p-4 dark:bg-black bg-white transition-all duration-200 border-r border-stone-200">
-          <button className={`absolute right-[-1em] dark:hover:bg-black dark:bg-stone-800 bg-white hover:bg-black  hover:text-white rounded-md border-stone-300 border p-1 transition-all duration-200 flex justify-end md:hidden`} onClick={toggleNav}>
+          <button className={`absolute right-[-1em] dark:hover:bg-black dark:bg-stone-800 bg-white hover:bg-black hover:text-white rounded-md border-stone-300 border p-1 transition-all duration-200 flex justify-end md:hidden`} onClick={toggleNav}>
             <FaTimes size={24} />
           </button>
             <div className="logo-mobile-nav mb-4">

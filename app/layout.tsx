@@ -14,7 +14,7 @@ export default function Layout({
   children: React.ReactNode
 }) {
   return (
-    <html suppressHydrationWarning lang="en">
+    <html lang="en">
       <body>
           <Providers>
             <SiteHeader />
