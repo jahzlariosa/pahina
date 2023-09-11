@@ -12,7 +12,7 @@ const SignOutButton = () => {
 
   return (
     <Link className="dark:text-white" href="#" onClick={() => signOut()}>
-      <PiSignOut size={24} className="inline" />
+      <PiSignOut size={24} className="inline" /> Logout
     </Link>
 
   );

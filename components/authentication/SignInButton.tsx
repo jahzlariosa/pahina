@@ -5,7 +5,7 @@ const SignInButton = () => {
 
     return (
         <Link className="dark:text-white" href="/auth/login">
-            <TbLogin size={24} className="inline" />
+            <TbLogin size={24} className="inline" /> Login
         </Link>
     );
 };
