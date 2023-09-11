@@ -7,7 +7,7 @@ const SignOutButton = () => {
   const { data: session } = useSession();
 
   if (!session) {
-    return null; // Render nothing if user is not signed in
+    return null; 
   }
 
   return (
