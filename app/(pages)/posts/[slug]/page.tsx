@@ -1,7 +1,7 @@
 import { Post } from '@/types/posts';
 import Image from 'next/image';
 import { redirect } from 'next/navigation';
-import { strapiFetch } from '@/data/strapiFetch';
+import { strapiFetch } from '@/app/data/strapiFetch';
 import { Metadata } from 'next';
 
 interface PostListProps {

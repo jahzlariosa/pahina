@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Post } from '@/types/posts';
-import Spinner from '@/components/loaders/spinner';
+import Spinner from '@/app/components/loaders/spinner';
 
 interface PostListProps {
   endPoint: string;
