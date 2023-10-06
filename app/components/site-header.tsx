@@ -1,7 +1,7 @@
 import { siteConfig } from "@/config/site";
 import { MainNav } from "./navigation/main-nav";
 import { MobileNav } from "./navigation/mobile-nav";
-import UserNavButton from "@/components/user/nav-button";
+import UserNavButton from "@/app/components/user/nav-button";
 
 export async function SiteHeader() {
   return (

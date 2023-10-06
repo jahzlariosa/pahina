@@ -1,6 +1,6 @@
 'use client'
 //Authentication
-import SignInButton from "@/components/authentication/SignInButton"
+import SignInButton from "@/app/components/authentication/SignInButton"
 import { useSession } from 'next-auth/react'
 import Image from "next/image"
 import { FaUser } from "react-icons/fa"

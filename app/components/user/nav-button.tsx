@@ -8,8 +8,8 @@ import MenuSubItem from '../ui/Menu/MenuSubItem'
 
 //Authentication
 import { getServerSession } from "next-auth"
-import SignInButton from "@/components/authentication/SignInButton"
-import SignOutButton from "@/components/authentication/SignOutButton"
+import SignInButton from "@/app/components/authentication/SignInButton"
+import SignOutButton from "@/app/components/authentication/SignOutButton"
 import { options } from "@/app/api/auth/[...nextauth]/options"
 
 async function UserNavButton() {

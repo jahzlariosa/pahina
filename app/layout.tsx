@@ -1,6 +1,6 @@
-import { Providers } from '@/components/providers/providers'
-import { SiteHeader } from '@/components/site-header'
-import '@/styles/globals.css'
+import { Providers } from '@/app/components/providers/providers'
+import { SiteHeader } from '@/app/components/site-header'
+import '@/app/styles/globals.css'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
